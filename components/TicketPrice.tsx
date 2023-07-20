@@ -22,7 +22,7 @@ export default function AdminTicketPriceCard() {
 
     function resetTicketPrice() {
         setTicketPrice(0);
-    }
+    };
 
     return (
         <Stack spacing={4}>

@@ -1,23 +1,16 @@
-## Getting Started
+## NFT Raffle app
 
-Create a project using this example:
+Create a NFT raffle where the owner of the contract can select an NFT to put up for raffle. Users purchase raffle tickets and a random winner will be selected and transferred the NFT.
 
-```bash
-npx thirdweb create --template next-typescript-starter
-```
+This repo is in reference to the thirdweb tutorial video: [YouTube](https://youtu.be/8-U-1mIl4sQ)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Features
+- Owner can start a raffle by providing the NFT contract and token ID of the NFT raffle prize (Checks to see if the NFt is owned by the owner)
+- Owner can set the price of the raffle entries
+- Owner can start and stop the raffle manually at any time
 
-On `pages/_app.tsx`, you'll find our `ThirdwebProvider` wrapping your app, this is necessary for our [hooks](https://portal.thirdweb.com/react) and
-[UI Components](https://portal.thirdweb.com/ui-components) to work.
-
-### Deploy to IPFS
-
-Deploy a copy of your application to IPFS using the following command:
-
-```bash
-yarn deploy
-```
+## NFT Raffle Contract
+Follow along in the thirdweb tutorial video above or deploy the pre-built [Raffle Contract](https://thirdweb.com/watase.eth/LotteryContract)
 
 ## Learn More
 

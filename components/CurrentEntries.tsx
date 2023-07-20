@@ -12,7 +12,6 @@ export default function CurrentEntries() {
         data: entries,
         isLoading: entriesLoading
     } = useContractRead(contract, "getPlayers");
-    console.log(entries);
 
     return (
         <Container py={8}>

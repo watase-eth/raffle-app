@@ -14,8 +14,6 @@ export default function Navbar() {
         data: admin,
         isLoading: adminLoading
     } = useContractRead(contract, "admin");
-    console.log(admin);
-
 
     return (
         <Container maxW={"1440px"} py={8}>

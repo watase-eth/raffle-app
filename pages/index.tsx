@@ -48,7 +48,7 @@ const Home: NextPage = () => {
       <SimpleGrid columns={2} spacing={4} minH={"60vh"}>
         <Flex justifyContent={"center"} alignItems={"center"}>
           {lotteryStatus ? (
-            <PrizeNFT/>
+            <PrizeNFT />
           ) : (
             <MediaRenderer
               src={HERO_IMAGE_URL}
@@ -56,7 +56,6 @@ const Home: NextPage = () => {
               height="100%"
             />
           )}
-          
         </Flex>
         <Flex justifyContent={"center"} alignItems={"center"} p={"5%"}>
           <Stack spacing={10}>

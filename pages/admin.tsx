@@ -5,22 +5,9 @@ import { ethers } from "ethers";
 import AdminLotteryStatusCard from "../components/LotteryStatus";
 import AdminTicketPriceCard from "../components/TicketPrice";
 import AdminRaffleWinnerCard from "../components/RaffleWinner";
+import WithdrawBalance from "../components/WithdrawBalance";
 
 export default function Admin() {
-    const {
-        contract
-    } = useContract(LOTTERY_CONTRACT_ADDRESS);
-
-    const {
-        data: ticketCost,
-        isLoading: ticketCostLoading
-    } = useContractRead(contract, "ticketCost");
-
-    const {
-        data: contractBalance,
-        isLoading: contractBalanceLoading
-    } = useContractRead(contract, "getBalance");
-
     return (
         <Container maxW={"1440px"} py={8}>
             <Heading>Admin Dashboard</Heading>
@@ -30,20 +17,7 @@ export default function Admin() {
                     <Stack spacing={4}>
                         <AdminTicketPriceCard />
                         <Divider />
-                        <Box>
-                            <Text fontWeight={"bold"} mb={4} fontSize={"xl"}>Contract Balance</Text>
-                            {!contractBalanceLoading ? (
-                                <Text fontSize={"xl"}>{ethers.utils.formatEther(contractBalance)} MATIC</Text>
-                            ) : (
-                                <Spinner />
-                            )}
-                        </Box>
-                        <Web3Button
-                            contractAddress={LOTTERY_CONTRACT_ADDRESS}
-                            action={(contract) => contract.call(
-                                "withdrawBalance"
-                            )}
-                        >Withdraw Balance</Web3Button>   
+                        <WithdrawBalance />  
                     </Stack>    
                 </Card>
                 <AdminRaffleWinnerCard />

@@ -18,7 +18,7 @@ const EntryCard: React.FC<Props> = ({ walletAddress }) => {
 
     function truncateAddress(address: string) {
         return address.slice(0, 6) + "..." + address.slice(-4);
-    }
+    };
 
     return (
         <Card p={8} mb={4}>

@@ -10,9 +10,11 @@ export default function PrizeNFT() {
     const {
         data: nftContractAddress
     } = useContractRead(lotteryContract, "nftContract");
+    console.log(nftContractAddress);
     const {
         data: nftTokenId
     } = useContractRead(lotteryContract, "tokenId");
+    console.log(nftTokenId);
 
     const {
         contract: nftContract
@@ -26,6 +28,7 @@ export default function PrizeNFT() {
         data: nft,
         isLoading: nftLoading
     } = useNFT(nftContract, nftTokenId);
+    console.log(nft);
 
     return (
         <Card p={"5%"}>
